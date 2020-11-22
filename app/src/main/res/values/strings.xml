@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PengunjungApp</string>
+    <string name="nama_pengunjung">Nama Pengunjung</string>
+    <string name="alamat">Alamat</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="laki_laki">L</string>
+    <string name="perempuan">P</string>
+    <string name="simpan">Simpan</string>
+</resources>
