@@ -51,12 +51,15 @@ class TambahActivity : AppCompatActivity() {
                     updatePengunjung(id, name, jenisKelamin, alamat)
                 }
             }
-            else -> {
+            "Simpan" -> {
                 btn_simpan.setOnClickListener {
                     val name = edt_nama_pengunjung.text.toString()
                     val alamat = edt_alamat.text.toString()
                     addPengunjung(name, alamat, jenisKelamin)
                 }
+            }
+            else -> {
+                Toast.makeText(this@TambahActivity, "Tidak ada kondisi terdeteksi", Toast.LENGTH_SHORT).show()
             }
         }
 
