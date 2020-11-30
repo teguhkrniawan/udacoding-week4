@@ -9,8 +9,8 @@ class ConfigNetwork {
     companion object {
         private fun getRetrofit(): Retrofit {
             return Retrofit.Builder()
-                //.baseUrl("http://192.168.43.58/weekfinal/")
-                .baseUrl("http://10.0.2.2/weekfinal/")
+                .baseUrl("http://192.168.43.58/weekfinal/")
+                //.baseUrl("http://10.0.2.2/weekfinal/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }

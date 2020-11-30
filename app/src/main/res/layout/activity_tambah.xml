@@ -45,6 +45,7 @@
     </RadioGroup>
 
     <Button
+        android:textAllCaps="false"
         android:id="@+id/btn_simpan"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"

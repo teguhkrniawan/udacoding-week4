@@ -39,30 +39,23 @@ class TambahActivity : AppCompatActivity() {
             jenisKelamin = radio.text.toString()
         }
 
-        when(btn_simpan.text){
-            "Perbaharui" -> {
-                btn_simpan.setOnClickListener {
-                    val id = dataItem?.id ?: ""
-                    val name = edt_nama_pengunjung.text.toString()
-                    val alamat = edt_alamat.text.toString()
-                    if (jenisKelamin == null){
-                        jenisKelamin = dataItem?.jenisKelamin
-                    }
-                    updatePengunjung(id, name, jenisKelamin, alamat)
-                }
-            }
-            "Simpan" -> {
+        if (btn_simpan.text == "Simpan") {
                 btn_simpan.setOnClickListener {
                     val name = edt_nama_pengunjung.text.toString()
                     val alamat = edt_alamat.text.toString()
                     addPengunjung(name, alamat, jenisKelamin)
                 }
-            }
-            else -> {
-                Toast.makeText(this@TambahActivity, "Tidak ada kondisi terdeteksi", Toast.LENGTH_SHORT).show()
-            }
+        } else if (btn_simpan.text == "Perbaharui") {
+           btn_simpan.setOnClickListener {
+               val id = dataItem?.id ?: ""
+               val name = edt_nama_pengunjung.text.toString()
+               val alamat = edt_alamat.text.toString()
+               if (jenisKelamin == null){
+                   jenisKelamin = dataItem?.jenisKelamin
+               }
+               updatePengunjung(id, name, jenisKelamin, alamat)
+           }
         }
-
     }
 
     private fun addPengunjung(namaPengunjung: String, alamatPengunjung: String, jenisKelamin: String?) {
